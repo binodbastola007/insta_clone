@@ -13,7 +13,9 @@ app.use(require("./routes/auth"));
 app.use(require("./routes/createPost"));
 app.use(require('./routes/user'));
 
-mongoose.connect("mongodb+srv://binodbastola8:nZg66Ci1F0wxj31P@cluster0.ycso00y.mongodb.net/?retryWrites=true&w=majority");
+
+// use your credentials for mongodb atlas
+mongoose.connect("mongodb://localhost:27017/DBname");
 
 mongoose.connection.on("connected" , ()=> {
     console.log("Successfully connected to mongoose");
