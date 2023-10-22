@@ -14,8 +14,7 @@ app.use(require("./routes/createPost"));
 app.use(require('./routes/user'));
 
 
-// use your credentials for mongodb atlas
-mongoose.connect("mongodb://localhost:27017/DBname");
+mongoose.connect('mongodb://127.0.0.1:27017/DBname');
 
 mongoose.connection.on("connected" , ()=> {
     console.log("Successfully connected to mongoose");
